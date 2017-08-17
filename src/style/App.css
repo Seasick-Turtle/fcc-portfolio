@@ -1,24 +1,17 @@
-.App {
-  text-align: center;
+#first-parallax {
+  background: url('../images/sergey-zolkin-192937.jpg') fixed center no-repeat;
+  background-size: cover;
+  height: 33rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#second-parallax {
+  background: url('../images/farzad-nazifi-71686.jpg') fixed center no-repeat;
+  background-size: cover;
+  height: 25rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#third-parallax {
+  background: url('../images/sai-kiran-anagani-61187.jpg') fixed center no-repeat;
+  background-size: cover;
+  height: 30rem;
 }
