@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/nav.css';
 import {
   Collapse,
   Navbar,
@@ -7,6 +8,10 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+var Scroll = require('react-scroll');
+var scroll = Scroll.animateScroll;
+
+
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -16,6 +21,18 @@ export default class Navigation extends Component {
     this.state = {
       isOpen: false
     };
+  }
+
+  scrollToAbout() {
+    scroll.scrollTo(590);
+  }
+
+  scrollToProjects() {
+    scroll.scrollTo(1120);
+  }
+
+  scrollToContact() {
+    scroll.scrollTo(1650);
   }
 
   toggle() {
@@ -32,19 +49,18 @@ export default class Navigation extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="#">About</NavLink>
+                    <NavLink onClick={this.scrollToAbout} href="#About">About</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="#">Projects</NavLink>
+                    <NavLink onClick={this.scrollToProjects} href="#Projects">Projects</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="#">Contact</NavLink>
+                    <NavLink onClick={this.scrollToContact} href="#Contact">Contact</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>
           </div>
-
         );
     }
 }
