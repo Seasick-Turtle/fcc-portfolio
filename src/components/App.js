@@ -20,7 +20,7 @@ export default class App extends Component {
           </div>
         </div>
         <div className="first-parallax"/>
-        <About id="#About"/>
+        <About/>
         <div id="second-parallax"/>
         <Projects/>
         <div id="third-parallax"/>

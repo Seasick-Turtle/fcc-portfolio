@@ -3,10 +3,17 @@
 	font-size: 3em;
 	text-align: center;
 	font-weight: 300;
-	margin: 1em auto;
+	margin: 0.7em auto;
 }
 
-#a-title {
-	/*text-decoration: underline;*/
+.a-div {
+	padding: 1em;
+}
+
+.a-title {
 	text-align: center;
+}
+
+#a-container {
+	padding: 3em 2em;
 }
