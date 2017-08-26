@@ -6,6 +6,8 @@ export default class Projects extends Component {
     return (
       <div>
         <h1 id="projects">Projects</h1>
+        <hr/>
+
       </div>
     );
   }

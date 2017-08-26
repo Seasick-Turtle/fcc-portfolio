@@ -8,9 +8,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-var Scroll = require('react-scroll');
-var scroll = Scroll.animateScroll;
-
+import smoothScroll from 'smoothscroll';
 
 
 export default class Navigation extends Component {
@@ -23,39 +21,28 @@ export default class Navigation extends Component {
     };
   }
 
-  scrollToAbout() {
-    scroll.scrollTo(590);
-  }
-
-  scrollToProjects() {
-    scroll.scrollTo(1120);
-  }
-
-  scrollToContact() {
-    scroll.scrollTo(1650);
-  }
-
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
 
+
     render() {
-        return (
+      return (
           <div>
             <Navbar color="inverse" inverse toggleable fixed="top">
               <NavbarToggler right onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink onClick={this.scrollToAbout} href="#About">About</NavLink>
+                    <NavLink href="#about">About</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink onClick={this.scrollToProjects} href="#Projects">Projects</NavLink>
+                    <NavLink href="#projects">Projects</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink onClick={this.scrollToContact} href="#Contact">Contact</NavLink>
+                    <NavLink href="#contact">Contact</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
