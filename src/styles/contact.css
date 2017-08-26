@@ -6,13 +6,18 @@
 	margin: 1em auto;
 }
 
-#cont-intro {
+#contact-intro {
 	font-family: 'Lato', sans-serif;
 	text-align: center;
 	font-weight: 300;
 	margin: 1em auto;
 }
 
-#c-form {
+#contact-form {
 	padding: 2em 0 3em 0;
+}
+
+#links {
+	text-align: center;
+	font-size: 3em;
 }

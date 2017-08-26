@@ -10,12 +10,12 @@ export default class Contact extends Component {
       <div>
         <h1 id="contact">Contact</h1>
         <hr/>
-        <h3 id="cont-intro">Want to get in touch with me or check out my social media?</h3>
-        <div>
-
+        <h3 id="contact-intro">Want to get in touch with me or check out my social media?</h3>
+        <div id="links">
+          <a href="https://github.com/Seasick-Turtle"><i className="fa fa-github" aria-hidden="true"></i></a>
         </div>
 
-        <Container id="c-form">
+        <Container id="contact-form">
           <Row>
             <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
               <Form  action="https://formspree.io/martincdev@gmail.com" method="POST">
