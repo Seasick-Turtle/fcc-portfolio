@@ -5,10 +5,18 @@ import { Card, CardImg, Button,
 
 import '../styles/project.css';
 
-function renderButton(props) {
+function renderGitHubButton(props) {
   return (
     <a href={props.ghLink} target="_blank">
       <Button color="primary">View on GitHub</Button>
+    </a>
+  )
+}
+
+function renderHerokuButton(props) {
+  return (
+    <a href={props.herokuLink} target="_blank">
+      <Button color="primary">View on Heroku</Button>
     </a>
   )
 }
@@ -23,11 +31,6 @@ export default class Project extends Component {
     this.toggle = this.toggle.bind(this);
   }
 
-  componentDidUpdate(props) {
-    renderButton(props);
-  }
-
-
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -37,10 +40,16 @@ export default class Project extends Component {
   render() {
     const {...post} = this.props;
     let ghLink = this.props.ghLink;
+    let herokuLink = this.props.herokuLink;
 
     let gitHubButton;
     if (ghLink) {
-      gitHubButton = renderButton(post);
+      gitHubButton = renderGitHubButton(post);
+    }
+
+    let herokuButton;
+    if (herokuLink) {
+      herokuButton = renderHerokuButton(post);
     }
 
     return (
@@ -67,9 +76,7 @@ export default class Project extends Component {
             </ModalBody>
             <ModalFooter>
               {gitHubButton}
-              <a href={post.herokuLink} target="_blank">
-                <Button color="primary">View on Heroku</Button>
-              </a>
+              {herokuButton}
             </ModalFooter>
           </Modal>
         </Card>

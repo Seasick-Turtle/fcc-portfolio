@@ -71,7 +71,6 @@ export default class Projects extends Component {
                 img={YelpCampAppThumbnail}
                 description="YelpCamp App"
                 herokuLink="https://sleepy-basin-78536.herokuapp.com/"
-
               />
             </Col>
           </Row>
