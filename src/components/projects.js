@@ -43,6 +43,8 @@ export default class Projects extends Component {
                   </p>
                 }
                 createdWith="React"
+                ghLink="https://github.com/Seasick-Turtle/ReactTimerApp"
+                herokuLink="https://arcane-dusk-11755.herokuapp.com/"
               />
             </Col>
             <Col className="project-item" xs="12" sm="6" md="4">
@@ -50,6 +52,8 @@ export default class Projects extends Component {
                 title='React Todo App'
                 img={TodoAppThumbnail}
                 description="React Todo App"
+                ghLink="https://github.com/Seasick-Turtle/react-todo"
+                herokuLink="http://obscure-shore-70049.herokuapp.com/#/todos?_k=qbwutq"
               />
             </Col>
             <Col className="project-item" xs="12" sm="6" md="4">
@@ -57,13 +61,17 @@ export default class Projects extends Component {
                 title='React Weather App'
                 img={ReactWeatherAppThumbnail}
                 description="React Weather App"
+                ghLink="https://github.com/Seasick-Turtle/ReactWeather"
+                herokuLink="http://sleepy-stream-38308.herokuapp.com/#/?_k=mwg89e"
               />
             </Col>
             <Col className="project-item" xs="12" sm="6" md="4">
               <Project
                 title='YelpCamp App'
                 img={YelpCampAppThumbnail}
-                description="React Weather App"
+                description="YelpCamp App"
+                herokuLink="https://sleepy-basin-78536.herokuapp.com/"
+
               />
             </Col>
           </Row>
