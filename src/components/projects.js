@@ -37,7 +37,11 @@ export default class Projects extends Component {
               <Project
                 title='React Timer App'
                 img={ReactTimerAppThumbnail}
-                description="React Timer app"
+                description={
+                  <p>
+                    This is a React/Redux based application that allows users to start a timer or set a countdown specified
+                  </p>
+                }
                 createdWith="React"
               />
             </Col>

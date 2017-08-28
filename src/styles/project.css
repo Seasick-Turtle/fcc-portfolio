@@ -5,25 +5,32 @@
 	width: 100%;
 }
 
-.project-img {
-	position: relative;
-}
-
-.project-img {
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
 	width: 100%;
-	vertical-align: top;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #000000;
 }
 
-.project-img:hover {
-	background:rgba(0,0,0,0.6);
-	opacity: 0.4;
-	transition: ease .5s;
-	-webkit-transition: all .5s;
+#project-card:hover .overlay {
+	opacity: .65;
 }
 
-.project-img:after {
-	content: "More info";
-	color: #fff;
+.text {
+	font-family: 'Lato', 'sans-serif';
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
 
 #project-card {
@@ -31,4 +38,5 @@
 	box-shadow: 2px 2px 2px #282828;
 	background-color: #000000;
 }
+
 
