@@ -12,7 +12,7 @@ export default class Contact extends Component {
         <hr/>
         <h3 id="contact-intro">Want to get in touch with me or check out my social media?</h3>
         <div id="links">
-          <a href="https://github.com/Seasick-Turtle"><i className="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://github.com/Seasick-Turtle"><i className="fa fa-github" aria-hidden="true"></i><span id="link-text">GitHub link</span></a>
         </div>
 
         <Container id="contact-form">

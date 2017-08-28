@@ -27,8 +27,8 @@ export default class Navigation extends Component {
     });
   }
 
-
     render() {
+
       return (
           <div>
             <Navbar color="inverse" inverse toggleable fixed="top">

@@ -5,3 +5,19 @@
 	font-weight: 300;
 	margin: 1em auto;
 }
+
+.project-item {
+	padding: 50px;
+}
+
+.dev {
+	width: 100%;
+	font-size: 5em;
+	text-align: center;
+	letter-spacing: .8em;
+	line-height: .3em;
+}
+
+.icon-col {
+	padding: .2em 0 0 1.2em;
+}
