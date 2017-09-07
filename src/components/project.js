@@ -57,7 +57,7 @@ export default class Project extends Component {
         <h5 id="project-title">{post.title}</h5>
         <Card id="project-card">
           <a onClick={this.toggle}>
-            <CardImg className="project-img" src={post.img} top width="100%" top height="100%"/>
+            <CardImg src={post.img} width="100%" height="100%"/>
             <div className="overlay">
               <div className="text">More Info</div>
             </div>

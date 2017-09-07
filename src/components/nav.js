@@ -10,7 +10,6 @@ import {
 } from 'reactstrap';
 import smoothScroll from 'smoothscroll';
 
-
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
