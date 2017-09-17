@@ -13,7 +13,7 @@ export default class Projects extends Component {
 
   render() {
     const timerDetail = {
-      title:'React Timer App',
+      title:'React Timer',
       description:'This is a React based application that allows ' +
       'users to start a timer or set a countdown specified in seconds.',
       createdWith:"React, React Router v2, Webpack, Karma, Foundation, ES6",
@@ -26,7 +26,7 @@ export default class Projects extends Component {
     };
 
     const todoDetail = {
-      title:'React Todo App',
+      title:'React Todo List',
       description:'This application allows the user to create a todo list with the ability to mark todos as completed, search through the todos, and toggle whether or not completed todos are displayed. Todos also show the date they were created and completed.',
       createdWith:'React, Firebase, Redux, Redux Thunk, Axios, Express',
       detail:[
@@ -37,8 +37,8 @@ export default class Projects extends Component {
       herokuLink:"http://obscure-shore-70049.herokuapp.com/#/todos?_k=qbwutq"
     };
     const weatherDetail = {
-      title:'React Weather App',
-      description:"React Weather App",
+      title:'React Weather',
+      description:"React Weather",
       detail:[
 
       ],
@@ -46,8 +46,8 @@ export default class Projects extends Component {
       herokuLink:"http://sleepy-stream-38308.herokuapp.com/#/?_k=mwg89e"
     };
     const campDetail = {
-      title:'YelpCamp App',
-      description:"YelpCamp App",
+      title:'YelpCamp',
+      description:"YelpCamp",
       detail:[
 
       ],
