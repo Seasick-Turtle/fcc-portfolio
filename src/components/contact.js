@@ -17,7 +17,7 @@ export default class Contact extends Component {
 
         <Container id="contact-form">
           <Row>
-            <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
+            <Col sm={{ size: 6, push: 2, pull: 2, offset: 1}}>
               <Form action="https://formspree.io/martincdev@gmail.com" method="POST">
                 <FormGroup>
                   <Label>Name: </Label>
@@ -32,7 +32,7 @@ export default class Contact extends Component {
                   <Input type="textarea" name="content"/>
                   <input type="hidden" name="_next"/>
                 </FormGroup>
-                <Button type="submit">Send</Button>
+                <Button id="contact-button" type="submit">Send</Button>
               </Form>
             </Col>
           </Row>

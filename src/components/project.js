@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, Button,
+import { Card, CardImg, Button, ButtonGroup, Row, Col, Container,
   Modal, ModalHeader, ModalBody, ModalFooter,
 } from 'reactstrap';
 
@@ -25,10 +25,13 @@ export default class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      collapse: false,
+      active: false
     };
 
     this.toggle = this.toggle.bind(this);
+    this.toggleCollapse = this.toggleCollapse.bind(this);
   }
 
   toggle() {
@@ -37,20 +40,32 @@ export default class Project extends Component {
     });
   }
 
+  toggleCollapse() {
+    this.setState({
+      collapse: !this.state.collapse
+    });
+  }
+
+  toggleActive() {
+    const displayText = this.state.active;
+    this.setState({
+      active: !displayText
+    })
+  }
+
   render() {
     const {...post} = this.props;
-    let ghLink = this.props.ghLink;
-    let herokuLink = this.props.herokuLink;
 
     let gitHubButton;
-    if (ghLink) {
+    if (post.ghLink) {
       gitHubButton = renderGitHubButton(post);
     }
 
     let herokuButton;
-    if (herokuLink) {
+    if (post.herokuLink) {
       herokuButton = renderHerokuButton(post);
     }
+
 
     return (
       <div>
@@ -66,12 +81,23 @@ export default class Project extends Component {
             <ModalHeader toggle={this.toggle}>{post.title}</ModalHeader>
             <ModalBody>
               <div className="project-details">
-                <h5>Description:</h5>
+                <Container className="switchBtns">
+                  <ButtonGroup >
+                    <Button>Description</Button>
+                    <Button>Created With</Button>
+                    <Button>More Info</Button>
+                  </ButtonGroup>
+                </Container>
+                <hr/>
+                <h5 className="project-open">Description:</h5>
                 <p>{post.description}</p>
-                <h5>Created with: </h5>
+                <h5 className="project-open">Created with: </h5>
                 <p>{post.createdWith}</p>
-                <h5>The Inner Workings:</h5>
-                <p>{post.detail}</p>
+                <h5 className="project-open">More details:</h5>
+                {post.detail.map((details) =>{
+                  return <p key={details}>{details}</p>
+                })}
+                <p id="note">Please note that viewing these applications on Heroku may take some time as they are deployed with Heroku's free plan and it may take some time for the apps to 'wake up'.</p>
               </div>
             </ModalBody>
             <ModalFooter>

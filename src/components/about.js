@@ -10,7 +10,7 @@ export default class About extends Component {
         <Container fluid={true} id="a-container">
           {/*<hr/>*/}
           <Row>
-            <Col xs="4" className="about-col">
+            <Col xs="12" sm='4' className="about-col">
               <h3 className="about-title">About Me <i className="fa fa-user-circle-o" aria-hidden="true"></i></h3>
               <hr/>
               <p>
@@ -20,17 +20,17 @@ export default class About extends Component {
                 While at Columbia College I studied C++ and Java, although I enjoyed taking these classes I came to realize that I wanted to give web development a shot. Although this happened near the very end of my college experience, I didn't want to go back; web development allows for me to be creative and feel proud of my creations. I would like to share that proud feeling of having something that looks amazing and fits the user's needs.
               </p>
             </Col>
-            <Col xs="4" className="about-col">
+            <Col xs="12" sm='4' className="about-col">
               <h3 className="about-title">What do I do? <i className="fa fa-laptop" aria-hidden="true"></i></h3>
               <hr/>
               <p>
                 As of right now, I have a basic understanding of both back end development and dealing with databases. Currently, I'm improving my skills with React and other front end technologies.
               </p>
               <p>
-                My future goal is to become a skilled full stack engineer with a deep understanding of JavaScript and other technologies so I can implement the proper tools along with great design.
+                My goal is to become a skilled full stack engineer with a deep understanding of JavaScript and other technologies so I can implement the proper tools along with great design choices.
               </p>
             </Col>
-            <Col xs="4" className="about-col">
+            <Col xs="12" sm='4' className="about-col">
               <h3 className="about-title">My Toolbox <i className="fa fa-wrench" aria-hidden="true"></i></h3>
               <hr/>
               <p>
@@ -39,13 +39,13 @@ export default class About extends Component {
               Front end:
               <ul>
                 <li>
-                  HTML, CSS, SCSS, JavaScript, React.JS
+                  HTML, CSS, SCSS, JavaScript, React
                 </li>
               </ul>
               Back end:
               <ul>
                 <li>
-                  Node.JS, Express, Mongoose.JS, Passport.JS
+                  Node, Express, Mongoose, Passport
                 </li>
               </ul>
               Databases:

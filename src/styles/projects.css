@@ -3,21 +3,29 @@
 	font-size: 3em;
 	text-align: center;
 	font-weight: 300;
-	margin: 1em auto;
+	margin: 1em 0 .5em 0;
 }
 
 .project-item {
 	padding: 50px;
 }
 
-.dev {
-	width: 100%;
-	font-size: 5em;
-	text-align: center;
-	letter-spacing: .8em;
-	line-height: .3em;
+#react-icon {
+	padding: 0;
 }
 
-.icon-col {
-	padding: .2em 0 0 1.2em;
+.dev {
+	width: 100%;
+	font-size: 4.1em;
+	text-align: center;
+	letter-spacing: .3em;
+	padding: .2em 0 .2em .1em;
+	line-height: .3em;
+	margin: 0;
+}
+
+#todo-warning {
+	text-align: center;
+	color: #b4b4b4;
+	font-style: italic;
 }

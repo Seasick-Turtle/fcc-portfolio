@@ -1,7 +1,16 @@
 #project-title {
 	text-align: center;
 	padding: 1em 0 1em 0;
-	/*display: inline-block;*/
+	width: 100%;
+}
+
+.switchBtns {
+	border: none;
+	width: 100%;
+}
+
+.modal-header .modal-title {
+	text-align: center;
 	width: 100%;
 }
 
@@ -20,6 +29,7 @@
 
 #project-card:hover .overlay {
 	opacity: .65;
+	cursor: pointer;
 }
 
 .text {
@@ -37,6 +47,11 @@
 	border: 1px inset #b4b4b4;
 	box-shadow: 2px 2px 2px #282828;
 	background-color: #000000;
+}
+
+#note {
+	color: #b4b4b4;
+	font-style: italic;
 }
 
 .hidden-text {
