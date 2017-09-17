@@ -42,7 +42,7 @@ function ShowCreated(props) {
 function ShowDetails(props) {
   return (
     <div style={props.selectedDisplay === 'More Details' ? { visibility: 'visible'}: {display: 'none'}}>
-      <h5 className="project-desc project-header"> Description: </h5>
+      <h5 className="project-desc project-header"> More Details: </h5>
       {props.detail.map((details) =>{
         return <p className="project-details" key={details}>{details}</p>
       })}

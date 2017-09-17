@@ -18,7 +18,7 @@ export default class Projects extends Component {
       'users to start a timer or set a countdown specified in seconds.',
       createdWith:"React, React Router v2, Webpack, Karma, Foundation, ES6",
       detail: [
-        'This application\'s state is handled on the component level, it passes props to children components and uses the props to show the appropriate information. The navigation bar at the top utilizes React Router v2, when the user clicks on a link the state will update to show the active component.',
+        'This application\'s state is handled on the component level, it passes props to children components and uses the props to show the appropriate information. The navigation bar at the top utilizes React Router v2, when the user clicks on a link the state will update and re-render the active component.',
         'For example, the Countdown component passes count as props to Clock, which uses it to update the state (in this case, it will update each second that changes).'
       ],
       ghLink:"https://github.com/Seasick-Turtle/ReactTimerApp",
