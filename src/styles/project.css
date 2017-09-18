@@ -4,6 +4,13 @@
 	width: 100%;
 }
 
+.project-links {
+	/*padding: .4em .28em .28em .28em;*/
+	font-size: 13px;
+	font-weight: 700;
+	display: flex;
+}
+
 .project-header {
 	text-align: center;
 	text-decoration: underline;
@@ -67,8 +74,4 @@
 
 .hidden-text {
 	display: none;
-}
-
-.project-open {
-	text-align: center;
 }

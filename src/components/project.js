@@ -8,15 +8,15 @@ import { PropTypes } from 'prop-types';
 function ShowGitHubButton(props) {
   return (
     <a href={props.ghLink} target="_blank">
-      <Button color="primary">View on GitHub</Button>
+      <Button className="project-links"  color="primary">View on GitHub</Button>
     </a>
   )
 }
 
 function ShowHerokuButton(props) {
   return (
-    <a href={props.herokuLink} target="_blank">
-      <Button color="primary">View on Heroku</Button>
+    <a className="project-links" href={props.herokuLink} target="_blank">
+      <Button className="project-links"  color="primary">View on Heroku</Button>
     </a>
   )
 }
