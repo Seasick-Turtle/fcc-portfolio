@@ -16,10 +16,10 @@ export default class Projects extends Component {
       title:'React Timer',
       description:'This is a React based application that allows ' +
       'users to start a timer or set a countdown specified in seconds.',
-      createdWith:"React, React Router v2, Webpack, Karma, Foundation, ES6",
+      createdWith: ['ES6', 'Foundation', 'Karma', 'React', 'React Router v2', 'SCSS', 'Webpack v1' ],
       detail: [
         'This application\'s state is handled on the component level, it passes props to children components and uses the props to show the appropriate information. The navigation bar at the top utilizes React Router v2, when the user clicks on a link the state will update and re-render the active component.',
-        'For example, the Countdown component passes count as props to Clock, which uses it to update the state (in this case, it will update each second that changes).'
+        'For example, the Countdown component passes count as props to Clock, which uses it to update the state (in this case, it will update as seconds progress or stop).'
       ],
       ghLink:"https://github.com/Seasick-Turtle/ReactTimerApp",
       herokuLink:'https://arcane-dusk-11755.herokuapp.com/'
@@ -28,28 +28,31 @@ export default class Projects extends Component {
     const todoDetail = {
       title:'React Todo List',
       description:'This application allows the user to create a todo list with the ability to mark todos as completed, search through the todos, and toggle whether or not completed todos are displayed. Todos also show the date they were created and completed.',
-      createdWith:'React, Firebase, Redux, Redux Thunk, Axios, Express',
+      createdWith:['Axios', 'ES6', 'Express', 'Firebase', 'React',  'Redux', 'Redux Thunk', 'SCSS', 'Webpack v1'],
       detail:[
-        <span id='todo-warning'>*This application requires the user to have a GitHub account in order to use/view.*</span>,
-        'This application uses Google\'s Firebase to store each user\'s todos and has a required login method that has user authentication. '
+        ' This application uses Google\'s Firebase to store each user\'s todos allowing for the list to be changed (via adding todos, toggling completed, searching, and showing completed). Redux is used to create action creators, an application level store, and reducers in order to perform functions including logging in and out.',
+        'The application also has a required login method that has user authentication; users cannot use the app until the credentials are verified with GitHub. There are key details that are verified through Firebase that will determine what the specifics of the current user\s details are.'
+
       ],
       ghLink:"https://github.com/Seasick-Turtle/react-todo",
       herokuLink:"http://obscure-shore-70049.herokuapp.com/#/todos?_k=qbwutq"
     };
     const weatherDetail = {
       title:'React Weather',
-      description:"React Weather",
+      description:"This is a React application that allows users to check the weather for a specific city in Fahrenheit.",
+      createdWith: ['Axios', 'ES6', 'Express', 'React', 'SCSS', 'Webpack v1'],
       detail:[
-
+        'When a user enters a city name in the search bar, Axios sends an AJAX request to Open Weather Map. A promise is used to ensure that the request is successful, if it is then weather information is displayed. Otherwise if there is an error, a message will be displayed to the user.'
       ],
       ghLink:"https://github.com/Seasick-Turtle/ReactWeather",
       herokuLink:"http://sleepy-stream-38308.herokuapp.com/#/?_k=mwg89e"
     };
     const campDetail = {
       title:'YelpCamp',
-      description:"YelpCamp",
+      description:"This is mainly a Express/Node.js application, it allows users to sign up, create posts, add comments, or even delete comments. This also features a splash screen that allows users to view example campgrounds.",
+      createdWith: ['Express', 'Node', 'MongoDB', 'Mongoose', 'REST API', 'Passport'],
       detail:[
-
+        'In order to provide well formatted functionality with Express and Node, the REST API was implemented'
       ],
       herokuLink:"https://sleepy-basin-78536.herokuapp.com/"
     };

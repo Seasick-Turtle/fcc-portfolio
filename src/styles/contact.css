@@ -16,12 +16,12 @@
 
 #contact-button {
 	margin: 0 0 4em 0;
+	cursor: pointer;
 }
 
 #links {
 	text-align: center;
 	font-size: 3em;
-	/*padding: 0 0 0 2em;*/
 }
 
 #link-text {

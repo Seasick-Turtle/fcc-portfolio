@@ -5,10 +5,18 @@
 }
 
 .project-links {
-	/*padding: .4em .28em .28em .28em;*/
+	padding: .7em;
 	font-size: 13px;
-	font-weight: 700;
+	font-weight: 600;
 	display: flex;
+}
+
+.project-created {
+	padding: .05em;
+}
+
+.project-links:hover {
+	cursor: pointer;
 }
 
 .project-header {
@@ -74,4 +82,12 @@
 
 .hidden-text {
 	display: none;
+}
+
+#todo-warning {
+	text-align: center;
+	color: #b4b4b4;
+	font-style: italic;
+	padding: .5em;
+	display: block;
 }

@@ -22,6 +22,17 @@ function ShowHerokuButton(props) {
 }
 
 function ShowDescription(props) {
+
+  if(props.title === 'React Todo List'){
+    return (
+      <div style={props.selectedDisplay === 'Description' ? { visibility: 'visible'}: {display: 'none'}}>
+        <h5 className="project-desc project-header"> Description: </h5>
+        <span id='todo-warning'>*This application requires the user to have a GitHub account in order to use/view.*</span>
+        <p className="project-desc">{props.description}</p>
+      </div>
+    )
+  }
+
   return (
     <div style={props.selectedDisplay === 'Description' ? { visibility: 'visible'}: {display: 'none'}}>
       <h5 className="project-desc project-header"> Description: </h5>
@@ -34,7 +45,15 @@ function ShowCreated(props) {
   return (
     <div style={props.selectedDisplay === 'Created With' ? { visibility: 'visible'}: {display: 'none'}}>
       <h5 className="project-desc project-header"> Created With: </h5>
-      <p className="project-desc">{props.createdWith}</p>
+      <ul>
+        {props.createdWith.map((created) => {
+          return (
+              <li className="project-created" key={created}>
+                {created}
+              </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
@@ -87,12 +106,10 @@ export default class Project extends Component {
     super(props);
     this.state = {
       modal: false,
-      collapse: false,
       selectedDisplay: 'Description'
     };
 
     this.toggle = this.toggle.bind(this);
-    this.toggleCollapse = this.toggleCollapse.bind(this);
     this.updateChoice = this.updateChoice.bind(this);
   }
 
@@ -107,12 +124,6 @@ export default class Project extends Component {
   toggle() {
     this.setState({
       modal: !this.state.modal
-    });
-  }
-
-  toggleCollapse() {
-    this.setState({
-      collapse: !this.state.collapse
     });
   }
 
