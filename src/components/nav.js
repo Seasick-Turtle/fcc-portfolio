@@ -8,13 +8,14 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import smoothScroll from 'smoothscroll';
+var smoothScroll = require('smoothscroll');
 
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+
     this.state = {
       isOpen: false
     };
@@ -26,7 +27,12 @@ export default class Navigation extends Component {
     });
   }
 
+
     render() {
+
+   // let handleClick = (event) => {
+   //    event.preventDefault();
+   //  };
 
       return (
           <div>

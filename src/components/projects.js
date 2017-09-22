@@ -31,7 +31,7 @@ export default class Projects extends Component {
       createdWith:['Axios', 'ES6', 'Express', 'Firebase', 'React',  'Redux', 'Redux Thunk', 'SCSS', 'Webpack v1'],
       detail:[
         ' This application uses Google\'s Firebase to store each user\'s todos allowing for the list to be changed (via adding todos, toggling completed, searching, and showing completed). Redux is used to create action creators, an application level store, and reducers in order to perform functions including logging in and out.',
-        'The application also has a required login method that has user authentication; users cannot use the app until the credentials are verified with GitHub. There are key details that are verified through Firebase that will determine what the specifics of the current user\s details are.'
+        'The application also has a required login method that has user authentication; users cannot use the app until the credentials are verified with GitHub. There are key details that are verified through Firebase that will determine what the specifics of the current user\'s details are.'
 
       ],
       ghLink:"https://github.com/Seasick-Turtle/react-todo",
