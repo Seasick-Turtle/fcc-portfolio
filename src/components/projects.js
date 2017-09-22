@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Project from './project';
 import { Container, Col, Row } from 'reactstrap';
-import ReactTimerAppThumbnail from '../images/ReactTimerAppThumbnail.jpg';
-import ReactWeatherAppThumbnail from '../images/ReactWeatherAppThumbnail.jpg';
-import TodoAppThumbnail from '../images/TodoAppThumbnail.jpg';
-import YelpCampAppThumbnail from '../images/YelpCampAppThumbnail.jpg';
+import ReactTimerAppThumbnail from '../images/ReactTimerAppThumbnail.47ecb1a4.jpg';
+import ReactWeatherAppThumbnail from '../images/ReactWeatherAppThumbnail.84e381b5.jpg';
+import TodoAppThumbnail from '../images/TodoAppThumbnail.4b993cb7.jpg';
+import YelpCampAppThumbnail from '../images/YelpCampAppThumbnail.d633e6b0.jpg';
 
 import '../styles/projects.css';
 
