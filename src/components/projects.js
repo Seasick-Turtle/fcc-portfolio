@@ -50,9 +50,11 @@ export default class Projects extends Component {
     const campDetail = {
       title:'YelpCamp',
       description:"This is mainly a Express/Node.js application, it allows users to sign up, create posts, add comments, or even delete comments. This also features a splash screen that allows users to view example campgrounds.",
-      createdWith: ['Express', 'Node', 'MongoDB', 'Mongoose', 'REST API', 'Passport'],
+      createdWith: [ 'EJS','Express', 'Node', 'MongoDB', 'Mongoose', 'REST API', 'Passport'],
       detail:[
-        'In order to provide well formatted functionality with Express and Node, the REST API was implemented'
+        'This particular application takes advantage of RESTful architecture making the proper requests. For example: GET to retrieve the route such as the index page storing the list of campgrounds, POST to create new campgrounds, PUT to update a campground posting, and DELETE to remove the selected campground. ',
+        'All campgrounds and their related data (such as comments or campground details) are stored within a MongoDB database. As such, there are different Mongoose schemas set for the campgrounds, comments, and users. Each schema details what is to be included in each object and provides validation for each property.',
+        'Passport.js is used to establish a session once a user has successfully logged in it will also serialize and deserialize user instances. It is also worth mentioning that this application takes advantage of using middleware that checks if users are logged in to post and if they are, if they own the campground post or comment. If a user meets all conditions, then they will be able to delete, edit, or create posts.'
       ],
       herokuLink:"https://sleepy-basin-78536.herokuapp.com/"
     };
