@@ -10,14 +10,14 @@ export default class App extends Component {
     return (
       <div>
         <Nav/>
-        <div className="container">
-          <div className="introduction">
+        <div className="container-fluid">
+          <span className="introduction">
             In an ocean of technology and information
             <br/>
             Here's my corner of the Internet
             <br/>
             <h1 id="create"> Let's create something together</h1>
-          </div>
+          </span>
         </div>
         <div className="first-parallax"/>
         <About/>

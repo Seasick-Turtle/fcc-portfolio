@@ -3,6 +3,7 @@ import '../styles/nav.css';
 import {
   Collapse,
   Navbar,
+  NavbarBrand,
   NavbarToggler,
   Nav,
   NavItem,
@@ -14,31 +15,27 @@ export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
 
     this.state = {
-      isOpen: false
+      collapsed: true
     };
   }
 
-  toggle() {
+  toggleNavbar() {
     this.setState({
-      isOpen: !this.state.isOpen
+      collapsed: !this.state.collapsed
     });
   }
 
 
     render() {
-
-   // let handleClick = (event) => {
-   //    event.preventDefault();
-   //  };
-
       return (
-          <div>
-            <Navbar color="inverse" inverse toggleable fixed="top">
-              <NavbarToggler right onClick={this.toggle} />
-              <Collapse isOpen={this.state.isOpen} navbar>
+          <div className='navigation'>
+            <Navbar color="dark" dark expand={'sm'} fixed='top' >
+              <NavbarBrand />
+              <NavbarToggler right='true' onClick={this.toggleNavbar} />
+              <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
                     <NavLink href="#about">About</NavLink>
