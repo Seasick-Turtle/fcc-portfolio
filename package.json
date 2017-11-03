@@ -4,19 +4,17 @@
   "private": true,
   "homepage": "https://seasick-turtle.github.io/fcc-portfolio/",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-beta.2",
     "gh-pages": "^1.0.0",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
-    "react-dom": "^15.6.1",
+    "react-dom": "^16.0.0",
     "react-scripts": "1.0.11",
     "react-thumbnail": "^1.0.0",
     "reactstrap": "^4.8.0",
-    "smoothscroll": "^0.3.0",
-    "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "smoothscroll": "^0.3.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -31,6 +29,8 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "html-webpack-plugin": "^2.30.1"
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }
