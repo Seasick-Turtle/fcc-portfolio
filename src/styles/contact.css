@@ -1,15 +1,22 @@
 #contact {
-	font-family: 'Lato', sans-serif;
 	font-size: 3em;
-	text-align: center;
-	font-weight: 300;
 	margin: 1em auto;
 }
 
-#contact-intro {
-	font-family: 'Lato', sans-serif;
+#contact, #contact-intro {
 	text-align: center;
+}
+
+#contact, #contact-intro, #links {
 	font-weight: 300;
+}
+
+#contact-form {
+	display: flex;
+	justify-content: center;
+}
+
+#contact-intro {
 	margin: 1em auto;
 	width: 95%
 }
@@ -17,10 +24,10 @@
 #contact-button {
 	margin: 0 0 4em 0;
 	cursor: pointer;
+	background-color: #0069ce;
 }
 
 #links {
-	text-align: center;
 	font-size: 3em;
 }
 

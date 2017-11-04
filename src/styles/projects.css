@@ -1,9 +1,11 @@
 #projects {
-	font-family: 'Lato', sans-serif;
 	font-size: 3em;
-	text-align: center;
 	font-weight: 300;
 	margin: 1em 0 .5em 0;
+}
+
+#projects, .dev {
+	text-align: center;
 }
 
 .project-item {
@@ -17,7 +19,6 @@
 .dev {
 	width: 100%;
 	font-size: 4.1em;
-	text-align: center;
 	letter-spacing: .3em;
 	padding: .2em 0 .2em .1em;
 	line-height: .3em;

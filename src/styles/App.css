@@ -1,42 +1,44 @@
+#create {
+	justify-content: center;
+	margin: 10rem 0;
+	font-size: 2.4rem;
+	width: auto;
+}
+
+.introduction {
+	text-align: center;
+	position: absolute;
+	font-size: 2em;
+	width: 95%;
+	margin: 1em auto;
+	line-height: 150%;
+}
+
+.introduction, #create {
+	height: auto;
+	font-weight: 300;
+	color: #fff;
+}
+
 .first-parallax {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/pexels-photo-225767.e9f01b0c.jpg') fixed center no-repeat;
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/pexels-photo-225767.e9f01b0c.jpg') fixed center no-repeat;
 	background-size: cover;
 	width: 100%;
 	min-height: 20em;
 	height: 40em;
 }
 
-.introduction {
-	text-align: center;
-	position: absolute;
-	font-family: 'Lato', sans-serif;
-	font-size: 2em;
-	font-weight: 300;
-	color: #fff;
-	width: 95%;
-	margin: 1em auto;
-	height: auto;
-	line-height: 150%;
-}
-
-#create {
-	justify-content: center;
-	margin: 10rem 0;
-	font-size: 2.4rem;
-	font-weight: 300;
-	color: #fff;
-	width: auto;
-	height: auto;
-}
-
 #second-parallax {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/farzad-nazifi-71686.3523756b.jpg') fixed center no-repeat;
-	background-size: cover;
-	height: 30rem;
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/farzad-nazifi-71686.3523756b.jpg') fixed center no-repeat;
 }
 
 #third-parallax {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/sai-kiran-anagani-61187.7d7068e7.jpg') fixed center no-repeat;
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/sai-kiran-anagani-61187.7d7068e7.jpg') fixed center no-repeat;
+
+}
+
+#second-parallax, #third-parallax {
 	background-size: cover;
 	height: 30rem;
+
 }
