@@ -24,6 +24,10 @@
 	background-color: #0069ce;
 }
 
+#contact-button:hover {
+	background-color: #004185;
+}
+
 #links {
 	font-size: 3em;
 }
