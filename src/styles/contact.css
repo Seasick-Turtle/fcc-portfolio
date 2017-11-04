@@ -3,11 +3,8 @@
 	margin: 1em auto;
 }
 
-#contact, #contact-intro {
+#contact, #contact-intro, #links  {
 	text-align: center;
-}
-
-#contact, #contact-intro, #links {
 	font-weight: 300;
 }
 
