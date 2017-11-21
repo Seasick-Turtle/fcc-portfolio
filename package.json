@@ -2,7 +2,7 @@
   "name": "fcc-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://seasick-turtle.github.io/fcc-portfolio/",
+  "homepage": "https://seasick-turtle.github.io/fcc-portfolio",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "gh-pages": "^1.0.0",
