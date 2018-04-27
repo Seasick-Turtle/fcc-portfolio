@@ -11,6 +11,14 @@ import '../styles/projects.css';
 
 export default class Projects extends Component {
 
+/*
+  const objects are used to store data that will be used
+  to display project information in project component
+  They will be passed as props to the child component so
+  that the modals will display the appropriate information
+
+  TODO: improve on method of passing props
+*/
   render() {
     const timerDetail = {
       title:'React Timer',
@@ -42,7 +50,7 @@ export default class Projects extends Component {
       description:"This is a React application that allows users to check the weather for a specific city in Fahrenheit.",
       createdWith: ['Axios', 'ES6', 'Express', 'React', 'SCSS', 'Webpack v1'],
       detail:[
-        'When a user enters a city name in the search bar, Axios sends an AJAX request to Open Weather Map. A promise is used to ensure that the request is successful, if it is then weather information is displayed. Otherwise if there is an error, a message will be displayed to the user.'
+        'When a user enters a city name in the search bar, Axios sends an asynchronous request to Open Weather Map. A promise is used to ensure that the request is successful, if it is then weather information is displayed. Otherwise if there is an error, a message will be displayed to the user.'
       ],
       ghLink:"https://github.com/Seasick-Turtle/ReactWeather",
       herokuLink:"http://sleepy-stream-38308.herokuapp.com/#/?_k=mwg89e"
@@ -59,60 +67,66 @@ export default class Projects extends Component {
       herokuLink:"https://sleepy-basin-78536.herokuapp.com/"
     };
     return (
-      <div>
-        <h1 id="projects">Projects</h1>
+      <section>
+        <header>
+          <h1 id="projects">Projects</h1>
+        </header>
         <Container fluid={true}>
-        <Row className="dev">
-          <Col xs="12">
-            <i className="devicon-html5-plain colored"></i>
-            <i className="devicon-css3-plain colored"></i>
-            <i className="devicon-javascript-plain colored"></i>
-          </Col>
-        </Row>
-          <Row className="dev">
-            <Col id='react-icon' xs="12">
-              <i className="devicon-react-original colored"></i>
-            </Col>
-          </Row>
-          <Row className="dev">
-            <Col xs="12">
-              <i className="devicon-webpack-plain colored"></i>
-              <i className="devicon-mongodb-plain-wordmark colored"></i>
-              <i className="devicon-nodejs-plain colored"></i>
-            </Col>
-          </Row>
+          <figure>
+            <Row className="dev">
+              <Col xs="12">
+                <i className="devicon-html5-plain colored"></i>
+                <i className="devicon-css3-plain colored"></i>
+                <i className="devicon-javascript-plain colored"></i>
+              </Col>
+            </Row>
+            <Row className="dev">
+              <Col id='react-icon' xs="12">
+                <i className="devicon-react-original colored"></i>
+              </Col>
+            </Row>
+            <Row className="dev">
+              <Col xs="12">
+                <i className="devicon-webpack-plain colored"></i>
+                <i className="devicon-mongodb-plain-wordmark colored"></i>
+                <i className="devicon-nodejs-plain colored"></i>
+              </Col>
+            </Row>
+          </figure>
         </Container>
         <Container fluid={true}>
           <hr/>
-          <Row >
-            <Col className="project-item" xs="12" sm="6" md="4">
-              <Project
-                img={ReactTimerAppThumbnail}
-                {...timerDetail}
-              />
-            </Col>
-            <Col className="project-item" xs="12" sm="6" md="4">
-              <Project
-                img={TodoAppThumbnail}
-                {...todoDetail}
-              />
-            </Col>
-            <Col className="project-item" xs="12" sm="6" md="4">
-              <Project
-                img={ReactWeatherAppThumbnail}
-                {...weatherDetail}
-              />
-            </Col>
-            <Col className="project-item" xs="12" sm="6" md="4">
-              <Project
-                img={YelpCampAppThumbnail}
-                {...campDetail}
-              />
-            </Col>
-          </Row>
+          <section>
+            <Row >
+              <Col className="project-item" xs="12" sm="6" md="4">
+                <Project
+                  img={ReactTimerAppThumbnail}
+                  {...timerDetail}
+                />
+              </Col>
+              <Col className="project-item" xs="12" sm="6" md="4">
+                <Project
+                  img={TodoAppThumbnail}
+                  {...todoDetail}
+                />
+              </Col>
+              <Col className="project-item" xs="12" sm="6" md="4">
+                <Project
+                  img={ReactWeatherAppThumbnail}
+                  {...weatherDetail}
+                />
+              </Col>
+              <Col className="project-item" xs="12" sm="6" md="4">
+                <Project
+                  img={YelpCampAppThumbnail}
+                  {...campDetail}
+                />
+              </Col>
+            </Row>
+          </section>
           <hr/>
         </Container>
-      </div>
+      </section>
     );
   }
 }

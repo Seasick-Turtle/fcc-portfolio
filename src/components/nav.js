@@ -31,7 +31,7 @@ export default class Navigation extends Component {
 
     render() {
       return (
-          <div className='navigation'>
+          <nav className='navigation'>
             <Navbar color="dark" dark expand={'sm'} fixed='top' >
               <NavbarBrand />
               <NavbarToggler right='true' onClick={this.toggleNavbar} />
@@ -49,7 +49,7 @@ export default class Navigation extends Component {
                 </Nav>
               </Collapse>
             </Navbar>
-          </div>
+          </nav>
         );
     }
 }

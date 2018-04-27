@@ -3,10 +3,11 @@ import { Card, CardImg, Button, Row, Col, Container,
   Modal, ModalHeader, ModalBody, ModalFooter,
 } from 'reactstrap';
 import '../styles/project.css';
-import { PropTypes } from 'prop-types';
+import  PropTypes  from 'prop-types';
 
 function ShowGitHubButton(props) {
   return (
+    // Open in new tab
     <a href={props.ghLink} target="_blank">
       <Button className="project-links"  color="primary">View on GitHub</Button>
     </a>
@@ -23,24 +24,20 @@ function ShowHerokuButton(props) {
 
 function ShowDescription(props) {
 
-  if(props.title === 'React Todo List'){
-    return (
-      <div style={props.selectedDisplay === 'Description' ? { visibility: 'visible'}: {display: 'none'}}>
-        <h5 className="project-desc project-header"> Description: </h5>
-        <span id='todo-warning'>*This application requires the user to have a GitHub account in order to use/view.*</span>
-        <p className="project-desc">{props.description}</p>
-      </div>
-    )
-  }
-
+  // Show description of project if title of props passed down
+  // is the todolist show warning that user needs a GitHub account to utilize application
   return (
     <div style={props.selectedDisplay === 'Description' ? { visibility: 'visible'}: {display: 'none'}}>
       <h5 className="project-desc project-header"> Description: </h5>
+        <span style={props.title === 'React Todo List' ? {visibility: 'visible'} : {display: 'none'}} id='todo-warning'>
+          *This application requires the user to have a GitHub account in order to use/view.*</span>
       <p className="project-desc">{props.description}</p>
     </div>
   )
 }
 
+// Show what each project was created with depending on the
+// prop that is passed down
 function ShowCreated(props) {
   return (
     <div style={props.selectedDisplay === 'Created With' ? { visibility: 'visible'}: {display: 'none'}}>
@@ -58,6 +55,9 @@ function ShowCreated(props) {
   )
 }
 
+
+// Show details of each project based on
+// the props that is being passed
 function ShowDetails(props) {
   return (
     <div style={props.selectedDisplay === 'More Details' ? { visibility: 'visible'}: {display: 'none'}}>
@@ -69,6 +69,7 @@ function ShowDetails(props) {
   )
 }
 
+// Function to display options to user
 function SelectDisplay(props) {
   const choices = ['Description', 'Created With', 'More Details'];
 
@@ -82,7 +83,7 @@ function SelectDisplay(props) {
               key={choice}
               className="select-column">
               <li
-                style={choice === props.selectedDisplay ? { color: 'black', fontWeight: 700}: null}
+                style={choice === props.selectedDisplay ? { color: 'black', fontWeight: 700, textDecoration: 'underline'}: null}
                 onClick={props.onSelect.bind(null, choice)}
                 className="select-item"
                 >
@@ -96,23 +97,30 @@ function SelectDisplay(props) {
   )
 }
 
-SelectDisplay.PropTypes = {
+// Ensure props being passed match to propType to prevent coercion error, etc.
+SelectDisplay.propTypes = {
   selectedDisplay: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired
 };
 
 export default class Project extends Component {
   constructor(props) {
+
+    // Passes props to component
     super(props);
+    // Set default state for project modals
     this.state = {
       modal: false,
       selectedDisplay: 'Description'
     };
 
+    // Bind to this object
     this.toggle = this.toggle.bind(this);
     this.updateChoice = this.updateChoice.bind(this);
   }
 
+  // Updates the user's choice when selecting any of the 3 options
+  // selected choice will change what is shown accordingly
   updateChoice(choice) {
     this.setState(function () {
       return {
@@ -121,6 +129,7 @@ export default class Project extends Component {
     });
   }
 
+  // Toggles whether or not if the modal is open
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -128,19 +137,24 @@ export default class Project extends Component {
   }
 
   render() {
+    // Use spread operator to assign to props value
+    // props contains information from each project
     const {...post} = this.props;
 
     let gitHubButton;
+    // If there is a GitHub link show GitHub button
     if (post.ghLink) {
       gitHubButton = ShowGitHubButton(post);
     }
 
     let herokuButton;
+    // If there's a Heroku link show Heroku button
     if (post.herokuLink) {
       herokuButton = ShowHerokuButton(post);
     }
 
     return (
+      // Create modal to show information about a particular project
       <div>
         <h5 id="project-title">{post.title}</h5>
         <Card id="project-card">
@@ -150,10 +164,28 @@ export default class Project extends Component {
               <div className="text">More Info</div>
             </div>
           </a>
-          <Modal isOpen={this.state.modal} toggle={this.toggle}>
-            <ModalHeader toggle={this.toggle}>{post.title}</ModalHeader>
+          <Modal
+            isOpen={this.state.modal}
+            toggle={this.toggle}
+            onClosed={() => {
+              // Reset selectedDisplay to Description on closing modal
+              if (this.state.selectedDisplay !== 'Description') {
+                this.setState({
+                  selectedDisplay: 'Description'
+                })
+              }
+            }}
+          >
+            {/*
+              Uses post (props) to populate the data for each modal
+              so that the user can view the appropriate information
+              for each individual project.
+            */}
+            <header>
+              <ModalHeader toggle={this.toggle}>{post.title}</ModalHeader>
+            </header>
             <ModalBody>
-              <div className="project-details">
+              <section className="project-details">
                 <SelectDisplay
                   selectedDisplay={this.state.selectedDisplay}
                   onSelect={this.updateChoice}
@@ -171,8 +203,8 @@ export default class Project extends Component {
                   selectedDisplay={this.state.selectedDisplay}
                   {...post}
                 />
-                <p id="note">Please note that viewing these applications on Heroku may take some time as they are deployed with Heroku's free plan and it may take some time for the apps to 'wake up'.</p>
-              </div>
+                <footer id="note">Please note that viewing these applications on Heroku may take some time as they are deployed with Heroku's free plan and it may take some time for the apps to 'wake up'.</footer>
+              </section>
             </ModalBody>
             <ModalFooter>
               {gitHubButton}

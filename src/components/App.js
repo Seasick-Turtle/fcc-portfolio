@@ -11,21 +11,21 @@ export default class App extends Component {
       <div>
         <Nav/>
         <div className="container-fluid">
-          <span className="introduction">
+          <header className="introduction">
             In an ocean of technology and information
             <br/>
             Here's my corner of the Internet
             <br/>
             <h1 id="create"> Let's create something together</h1>
-          </span>
+          </header>
         </div>
-        <div className="first-parallax"/>
+        <figure className="first-parallax"/>
         <About/>
-        <div id="second-parallax"/>
+        <figure id="second-parallax"/>
         <Projects/>
-        <div id="third-parallax"/>
+        <figure id="third-parallax"/>
         <Contact/>
-        <div className="first-parallax"/>
+        <figure className="first-parallax"/>
       </div>
     );
   }

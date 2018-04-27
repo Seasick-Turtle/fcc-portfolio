@@ -5,36 +5,51 @@ import '../styles/about.css';
 export default class About extends Component {
   render() {
     return (
-      <div>
-        <h1 id="about">Who am I?</h1>
+      <section>
+        <header>
+          <h1 id="about">Who am I?</h1>
+        </header>
         <Container fluid={true} id="a-container">
-          {/*<hr/>*/}
           <Row>
-            <Col xs="12" sm='4' className="about-col">
-              <h3 className="about-title">About Me <i className="fa fa-user-circle-o" aria-hidden="true"></i></h3>
+            {
+              /*
+                Resize column size of each section to provide a better
+                experience of portfolio depending on the resolution of
+                the user's screen
+              */
+            }
+            <Col xs="12" sm='12' md='4' className="about-col">
+              <header>
+                <h3 className="about-title">About Me <i className="fa fa-user-circle-o" aria-hidden="true"></i></h3>
+              </header>
               <hr/>
               <p>
-                Hello there. My name is Christopher Martin and I'm an aspiring web developer. I recently graduated from Columbia College and finally earned my degree, a Bachelor's of Science in Computer Information Systems.
+                Hello there. My name is Christopher Martin, I'm a web developer. I recently graduated from Columbia College and finally earned my degree, a BS in Computer Information Systems.
               </p>
               <p>
-                While at Columbia College I studied C++ and Java, although I enjoyed taking these classes I came to realize that I wanted to give web development a shot. Although this happened near the very end of my college experience, I realized how much I wanted to create web applications; web development allows for me to be creative and feel proud of my creations. I would like to share that proud feeling of having something that looks amazing and fits the user's needs.
+                While at Columbia College I studied C++ and Java, although I enjoyed taking these classes I came to realize that I wanted to give web development a shot. Although this happened after my college experience, I realized how much I enjoyed making web applications.  Front end development has the great appeal of creating great looking & functioning websites for others to enjoy while back end development has its own interesting complexities.
               </p>
             </Col>
-            <Col xs="12" sm='4' className="about-col">
-              <h3 className="about-title">What do I do? <i className="fa fa-laptop" aria-hidden="true"></i></h3>
+            <Col xs="12" sm='12' md='4' className="about-col">
+              <header>
+                <h3 className="about-title">What do I do? <i className="fa fa-laptop" aria-hidden="true"></i></h3>
+              </header>
               <hr/>
               <p>
-                As of right now, I have a basic understanding of both back end development and dealing with databases. Currently, I'm improving my skills with React and other front end technologies.
+                Currently I'm focusing on front end development and ways to improve the way I write JavaScript along
+                with understanding the language mechanics as a whole.
               </p>
               <p>
-                My goal is to become a skilled full stack engineer with a deep understanding of JavaScript and other technologies so I can implement the proper tools along with great design choices.
+                With this in mind, my goal is to become a skilled full stack engineer with a deep understanding of JavaScript and other technologies so I may implement the proper tools along with great design methods.
               </p>
             </Col>
-            <Col xs="12" sm='4' className="about-col">
-              <h3 className="about-title">My Toolbox <i className="fa fa-wrench" aria-hidden="true"></i></h3>
+            <Col xs="12" sm='12' md='4' className="about-col">
+              <header>
+                <h3 className="about-title">My Toolbox <i className="fa fa-wrench" aria-hidden="true"></i></h3>
+              </header>
               <hr/>
               <p>
-                Wondering what technologies I've used? Here's a list of them:
+                Here's a list of frameworks and other tools that I'm familiar with or have some knowledge of:
               </p>
               Front end:
               <ul>
@@ -45,13 +60,7 @@ export default class About extends Component {
               Back end:
               <ul>
                 <li>
-                  Node, Express, Mongoose, Passport
-                </li>
-              </ul>
-              Databases:
-              <ul>
-                <li>
-                  MongoDB, Firebase
+                  Node, Express, Mongoose, Passport, MongoDB, Firebase
                 </li>
               </ul>
               Other Tools:
@@ -64,7 +73,7 @@ export default class About extends Component {
           </Row>
         </Container>
 
-        </div>
+        </section>
     );
   }
 }
